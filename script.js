@@ -37,7 +37,7 @@ function generaBollettini() {
                 
                 <p><strong>Importo:</strong> €${importoRata} / (${importoLettere})</p>
                 <p><strong>Intestatario:</strong> ${intestatario}</p>
-                <p><strong>Causale:</strong> ${causale} ${targa}</p>
+                <p><strong>Causale:</strong> ${causale} ${targa.toUpperCase()}</p>
                 <p><strong>Data di Pagamento:</strong> ${dataFormato}</p>
                 <p><strong>Eseguito da:</strong> ${eseguitoDa}</p>
                 <p><strong>Indirizzo:</strong> ${via}, ${cap}, ${localita}</p>
