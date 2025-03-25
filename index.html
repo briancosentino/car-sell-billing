@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <form class="m-auto no-print" id="bollettinoForm">
+        <label>Importo Totale (€): <input type="number" id="importo" required></label>
+        <label>Importo in Lettere: <input type="text" id="importoLettere" required></label>
+        <label>Intestatario: <input type="text" id="intestatario" required></label>
+        <label>Targa: <input type="text" id="targa" required></label>
+        <label>Causale: <input type="text" id="causale" required></label>
+        <label>Data di Inizio Pagamenti: <input type="date" id="dataInizio" required></label>
+        <label>Eseguito da: <input type="text" id="eseguitoDa" required></label>
+        <label>Indirizzo (Via): <input type="text" id="via" required></label>
+        <label>CAP: <input type="number" id="cap" required></label>
+        <label>Località: <input type="text" id="localita" required></label>
+        <label>Numero di Rate (1-60): <input type="number" id="rate" min="1" max="60" required></label>
+        <label>Tipo di Rateizzazione:
+            <select id="tipo" required>
+                <option value="settimane">Settimane</option>
+                <option value="mesi">Mesi</option>
+            </select>
+        </label>
+
+        <button type="button" onclick="generaBollettini()">Genera</button>
+    </form>
+
+    <div id="bollettini"></div>
+
+    <button id="stampa" class="no-print" onclick="window.print()" style="display: none;">Stampa</button>
+
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
